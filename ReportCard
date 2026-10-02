@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class ReportCard {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double average;
+        int subjectCode;
+
+        System.out.print("Enter student's average grade: ");
+        average = input.nextDouble();
+
+        if (average > 90)
+        {
+            System.out.println("Grade: Excellent");
+        }
+        else if (average >= 75)
+        {
+            System.out.println("Grade: Good");
+        }
+        else
+        {
+            System.out.println("Grade: Needs Improvement");
+        }
+
+        System.out.print("Enter subject code (1-Math, 2-Science, 3-English): ");
+        subjectCode = input.nextInt();
+
+        switch (subjectCode)
+        {
+            case 1:
+                System.out.println("Subject: Math");
+                break;
+
+            case 2:
+                System.out.println("Subject: Science");
+                break;
+
+            case 3:
+                System.out.println("Subject: English");
+                break;
+
+            default:
+                System.out.println("Invalid subject code");
+        }
+    }
+}
